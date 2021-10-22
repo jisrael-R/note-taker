@@ -9,11 +9,11 @@ const {notesStorage}  = require("../../db/db.json");
 //    res.json(notesStorage);
 // });
 
-router.delete('/api/notes/:id',(req, res) =>{
+router.delete('/notes/:id',(req, res) =>{
   //remove the note with this id from the json data and resave the file
 });
 
-router.put('/api/notes/:id',(req, res) =>{
+router.put('/notes/:id',(req, res) =>{
   //update the note with this id and resave the file
 });
 
@@ -24,16 +24,20 @@ router.post('/notes',(req, res) =>{
 
 });
 
-function createNote(body, notes){
-  const newNotes = body;
-  notes.push(newNotes);
-   fs.writeFileSync(
-      path.join(__dirname,"../../db/db.json"),
-      JSON.stringify({notes},null,2)
+function createNote(body) {
+  const newNote = body;
+  const updatedNotes = [];
+  fs.readFile(path.join(__dirname, "../db/db.json", 'utf-8'), notes => {
+    updatedNotes = [ ...notes, newNote ];
+    fs.writeFileSync(
+      path.join(__dirname, "../db/db.json"),
+      JSON.stringify(updatedNotes, null, 2)
     );
-    return newNotes;
-
+   
+  });
 }
+
+
 
 
 
