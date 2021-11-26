@@ -50,4 +50,4 @@
  
 #
   
-  *Check [Note Taker]((https://arcane-atoll-43077.herokuapp.com/))*
+  *Check [Note Taker]((https://arcane-atoll-43077.herokuapp.com/) *
