@@ -8,7 +8,7 @@
   this project consist of creating an application that could users to store
   data/or info. in this case we're a basic database to store the title and 
   text of each note. this way the user can store and delete any information
-  they decide to. This application is was created around:
+  they decide to. This [application](https://arcane-atoll-43077.herokuapp.com/) is was created around:
 
   - Node.js
   - express
@@ -50,4 +50,4 @@
  
 #
   
-  *this file was generated using this project*
+  *Check [Note Taker]((https://arcane-atoll-43077.herokuapp.com/))*
