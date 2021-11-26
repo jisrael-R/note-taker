@@ -43,6 +43,15 @@ const saveNote = (note) =>
     body: JSON.stringify(note),
   });
 
+  const UpdateNote = (note) =>
+  fetch(`/api/notes/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(note),
+  });
+
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
@@ -52,7 +61,7 @@ const deleteNote = (id) =>
   });
 
 const renderActiveNote = () => {
-  hide(saveNoteBtn);
+ hide(saveNoteBtn);
 
   if (activeNote.id) {
     noteTitle.setAttribute('readonly', true);
@@ -66,6 +75,7 @@ const renderActiveNote = () => {
     noteText.value = '';
   }
 };
+
 
 const handleNoteSave = () => {
   const newNote = {
