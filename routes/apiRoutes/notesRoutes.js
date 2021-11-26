@@ -8,7 +8,7 @@ const router = require('express').Router();
 
 
 //api
-router.get("/api/notes", (req, res) => {
+router.get("/notes", (req, res) => {
     fs.readFile(path.join(__dirname, "../../db/db.json"), (err, data) => {
         if (err) throw err;
         const notes = JSON.parse(data);
@@ -17,7 +17,7 @@ router.get("/api/notes", (req, res) => {
 });
 
 
-router.post("/api/notes", function(req, res) {
+router.post("/notes", function(req, res) {
     fs.readFile(path.join(__dirname, "../../db/db.json"), (err, data) => {
         if (err) throw err;
         const notes = JSON.parse(data);
@@ -33,7 +33,7 @@ router.post("/api/notes", function(req, res) {
     });
 });
 
-router.delete("/api/notes/:id", function(req, res) {
+router.delete("/notes/:id", function(req, res) {
     const noteID = req.params.id;
     fs.readFile(path.join(__dirname, "../../db/db.json"), (err, data) => {
         if (err) throw err;
