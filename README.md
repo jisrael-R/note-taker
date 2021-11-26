@@ -50,4 +50,4 @@
  
 #
   
-  *Check <a href="https://arcane-atoll-43077.herokuapp.com/" target="_blank">Note Taker</a>*
+  *Check [Note Taker](https://arcane-atoll-43077.herokuapp.com/)*
